@@ -21,11 +21,11 @@ class ffmpegBundle
         );
         $app['ffmpeg.logger'] = null;
 
-        $app['ffmpeg.configuration.build'] = $app->share(function (Application $app) {
+        $app['ffmpeg.configuration.build'] = $app->share(function ($app) {
             return array_replace($app['ffmpeg.default.configuration'], $app['ffmpeg.configuration']);
         });
 
-        $app['ffmpeg'] = $app['ffmpeg.ffmpeg'] = $app->share(function (Application $app) {
+        $app['ffmpeg'] = $app['ffmpeg.ffmpeg'] = $app->share(function ($app) {
             $configuration = $app['ffmpeg.configuration.build'];
 
             if (isset($configuration['ffmpeg.timeout'])) {
@@ -39,7 +39,7 @@ class ffmpegBundle
             return new ArrayCache();
         });
 
-        $app['ffmpeg.ffprobe'] = $app->share(function (Application $app) {
+        $app['ffmpeg.ffprobe'] = $app->share(function ($app) {
             $configuration = $app['ffmpeg.configuration.build'];
 
             if (isset($configuration['ffmpeg.timeout'])) {
