@@ -1,0 +1,25 @@
+{
+    "name": "zeroframework/zeroframework-ffmpegbundle",
+    "description": "ffmpgeg bundle for zeroframework",
+    "keywords": ["ffmpeg", "zeroframework"],
+    "homepage": "https://github.com/zeroframework/zeroframework-ffmpegbundle",
+    "type": "library",
+    "license": "GPLV2",
+    "authors": [
+        {
+            "name": "Jean pasqualini",
+            "email": "jpasqualini75@gmail.com",
+            "homepage": "http://fr.viadeo.com/fr/profile/developpeur.symfony2"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "php-ffmpeg/php-ffmpeg": "0.5.*@dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src"
+        }
+    }
+}
+
